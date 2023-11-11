@@ -1,0 +1,85 @@
+
+        
+        <body>    
+        <div class="form-group">
+        <div class="container">
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" novalidate>
+                <div id="loginForm">
+                    <img src="assets/Images/wedlocksw.png" alt="Wonder Events Logo" class="navbar-logo rounded-rectangle" style="max-height: 80px;" width="130px;"><br/>
+                    <div></div>
+                    <br/>
+                
+                        <!-- Email and password input fields -->
+                        
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control" type="text" name="emailId" ngModel #emailId="ngModel"
+                                placeholder="Enter Email-ID" required/>
+                            </div>
+                        <div *ngIf="emailId.errors?.['required'] && emailId.touched">
+                            <p class="text-danger">Enter EmailId</p>
+                        </div>
+                    <br/>
+                
+                        
+                        
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input class="form-control" type="password" name="password" ngModel #password="ngModel"
+                                placeholder="Enter Password" required  />
+                            </div>
+                        <div *ngIf="password.errors?.['required'] && password.touched">
+                            <p class="text-danger">Enter Password</p>
+                        </div>
+                    </div>
+                   
+                        <br/>
+
+                        <div>
+                            <label style="color: black;">
+                              <input type="checkbox" required> Remember me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </label>
+                            <a routerLink="forget-pass"> Forgot password</a>
+                          </div>
+                          <br/>
+
+                            <form [formGroup]="aFormGroup?.value" novalidate>
+                                <ngx-recaptcha2
+                                    (resolved)="handleCaptchaResolved($event)"
+                                    [siteKey]="siteKey"
+                                    size="normal"
+                                    (expired)="handleCaptchaExpired($event)" 
+                                ></ngx-recaptcha2>
+                            </form><br/>
+
+                            
+                            
+                                <div class="form-group" class="center-text">
+                                    <button [disabled]="!loginForm.valid" type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                           <br/>
+                           <!-- "!loginForm.valid || !isCaptchaResolved" -->
+                            
+
+                            <!-- <div id="g_id_onload" data-client_id="676310420824-v9dsmvurpledqfbjcndojkq9aho7j4pi.apps.googleusercontent.com"
+                            data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:8085" data-auto_prompt="false">
+                          </div> -->
+                    
+
+                            <div>
+                            <p>
+                                &nbsp;&nbsp; New User? &nbsp;&nbsp; <span id="sign" (click)="showRegister()"><b>Register</b></span>
+                            </p>
+                        </div>
+                        <!-- <div class="google-button" (click)="signInWithGoogle()">
+                        <button><img src="/assets/Images/googlelogo.png" alt="Google Logo" class="google-logo" >
+                        Sign in with Google
+                        </button>
+                        </div> -->
+                    </div>
+            </form>
+        </div>
+    </div>
+
+ </body>

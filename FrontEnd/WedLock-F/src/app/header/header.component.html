@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-bs-theme="dark" style="background-color: #d0e0e7; height: 70px;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <img src="assets/Images/wedlocksw.png" alt="Wonder Events Logo" class="navbar-logo rounded-rectangle" style="max-height: 80px;" width="130px;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        
+        &nbsp;&nbsp;
+        &nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" *ngIf="userloggedstatus()" style="color: black;"><h6><i><b>Home</b></i></h6></a>
+        </li>&nbsp;&nbsp;
+        
+        &nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="matches" *ngIf="userloggedstatus()" style="color: black;"><h6><i><b>Matches</b></i></h6></a>
+        </li>&nbsp;&nbsp;
+        &nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="search" *ngIf="userloggedstatus()" style="color: black;"><h6><i><b>Search</b></i></h6></a>
+        </li>&nbsp;&nbsp;
+        &nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="profile" *ngIf="userloggedstatus()" style="color: black;"><h6><i><b>Profile</b></i></h6></a>
+        </li>&nbsp;&nbsp;
+        
+      </ul>
+      <ul class="navbar-nav ml-auto"> 
+        &nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login" *ngIf="!userloggedstatus()" style="color: black;"><h6><i><b>Login</b></i></h6></a>
+        </li>&nbsp;&nbsp;
+        &nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="register" *ngIf="!userloggedstatus()" style="color: black;"><h6><i><b>Register</b></i></h6></a>
+        </li>&nbsp;&nbsp;
+        &nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about" *ngIf="!userloggedstatus()" style="color: black;"><h6><i><b>About</b></i></h6></a>
+        </li>&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link" routerLink="logout" *ngIf="userloggedstatus()" style="color: black;"><h6><i><b>Logout</b></i></h6></a>
+        </li>&nbsp;&nbsp;
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+
+

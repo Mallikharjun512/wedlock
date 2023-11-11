@@ -1,0 +1,70 @@
+body {
+  background-image: url('src/assets/Images/about.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height :100%;
+  height: 120vh;
+  margin-top: -120px;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh; /* Center vertically */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+#loginForm {
+  width: 800px;
+  text-align: center;
+  background-color: rgba(225, 241, 232, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 300px;
+}
+
+#sign {
+  font-size: larger;
+  cursor: pointer;
+}
+
+.input-group-addon {
+  background-color: #fff;
+}
+
+.google-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.logo {
+  max-width: 100px; /* Adjust the size as needed */
+  height: auto;
+}
+
+
+.h3{
+    color :rgb(165, 79, 42);
+
+}
+
+.h5{
+    color :rgb(3, 147, 225);
+}
+
+
+.small-form {
+  flex: 1; /* Distribute available width equally between the small forms */
+  max-width: 55%; /* Adjust the width as needed */
+  margin: 10px; /* Add spacing between the small forms */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(223, 218, 239, 0.8);
+  text-align: center;
+}

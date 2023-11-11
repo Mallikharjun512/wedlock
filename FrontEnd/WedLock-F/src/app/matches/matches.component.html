@@ -1,0 +1,29 @@
+
+
+<body>
+<h2>.    </h2>
+<h2>.    </h2>
+<h3 class="h2"><i><b>----Matches----</b></i></h3><br/><br/>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-4" *ngFor="let us of oppositeGenderUsers" align="center">
+            <div class="col-md-12" style="margin-bottom: 30px;">
+                <div class="card" style="width:230px">
+                    <img class="card-img-top" [src]="us.gender === 'Male' ? 'assets/Images/boy.jpg' : 'assets/Images/girl.jpg'" alt="image"
+                        style="width:100%; height:100%;">
+                    <div class="card-body" style="color:black; background:#f4eee7">
+                        <p><b>Name:</b>{{ us.userName }}</p>
+                        <p><b>Age:</b>{{ us.dateOfBirth | age }}</p>
+                        <p><b>MotherTongue:</b>{{ us.motherTongue}}</p>
+                        <p><b>Height:</b>{{ us.height}}</p>
+                        <p><b>EmailId:</b>{{ us.emailId}}</p>
+                         <!-- <p><b>Gender:</b>{{ us.gender | lowercase }}</p> 
+                        <p align="center"><button (click)="request()" class="btn btn-primary">Request</button></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

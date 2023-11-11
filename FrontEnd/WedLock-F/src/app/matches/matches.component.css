@@ -1,0 +1,16 @@
+body {
+    background-image: url('src/assets/Images/matches.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height :100%;
+    height: 180vh;
+    /* margin-top: 0px; */
+    overflow: hidden; /*Prevent scrolling */
+  }
+  
+  .h2{
+    color :rgb(247, 243, 245);
+    text-align: center;
+
+}

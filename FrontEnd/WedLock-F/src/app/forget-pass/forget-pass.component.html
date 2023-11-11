@@ -1,0 +1,22 @@
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="background-image: url('src/assets/Images/login8.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh;">
+        <div class="card text-center" style="width: 400px;">
+            <div class="card-header h5 text-white bg-primary">Password Reset</div>
+            <div class="card-body px-5">
+                <p class="card-text py-2">
+                    Enter your email address, and we'll send you an OTP to reset your password.
+                </p>
+                <div class="form-outline">
+                    <input type="email" id="typeEmail" class="form-control my-3" placeholder="Enter your EmailId" [(ngModel)]="emailId" required/>
+                    <button class="btn btn-primary w-100 my-2" (click)="forgetOtp(emailId)">Send OTP</button>
+                </div>
+                <input type="text" class="form-control my-3" placeholder="Enter OTP" [(ngModel)]="Otp">
+                <button class="btn btn-primary w-100 my-2" (click)="forgetpass(emailId, Otp)">Reset password</button>
+                <div class="d-flex justify-content-between mt-4">
+                    <a routerLink="login">Login</a>
+                    <a routerLink="register">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

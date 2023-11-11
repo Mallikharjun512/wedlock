@@ -1,0 +1,11 @@
+body {
+  background-image: url('src/assets/Images/HomeF.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height :100%;
+  height: 120vh;
+  width:200vh; 
+  margin-top: 60px;
+  overflow: hidden; /* Prevent scrolling */
+}

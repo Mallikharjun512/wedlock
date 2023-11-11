@@ -1,0 +1,48 @@
+<body>
+  <div class="search-container">
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <select [(ngModel)]="selectedCriteria" class="search-select">
+          <option value="">Select Option</option>
+          <option value="gender">Gender</option>
+          <option value="location">Location</option>
+          <option value="education">Education</option>
+          <option value="job">Job</option>
+          <option value="motherTongue">Mother Tongue</option>
+        </select>
+        <input [(ngModel)]="searchQuery" placeholder="----Search----" class="search-input">
+        <button (click)="searchUsers()" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+  
+
+<div class="container">
+  <div class="row">
+  <ng-container *ngFor="let user of searchResults; let i = index">
+    <div class="col-md-4">
+      <div class="col-md-12" style="margin-bottom: 20px;">
+        <div class="card" style="width: 230px;">
+          <img
+            class="card-img-top"
+            [src]="user.gender === 'Male' ? 'assets/Images/boy.jpg' : 'assets/Images/girl.jpg'"
+            alt="image" style="width: 100%; height: 100%;"/>
+          <div class="card-body" style="color:black; background: #e4f1f2;">
+            <p><b>Name:</b> {{ user.userName }}</p>
+            <p><b>Age:</b> {{ user.dateOfBirth | age }}</p>
+            <p><b>MotherTongue:</b>{{ user.motherTongue}}</p>
+            <p><b>Height:</b>{{ user.height}}</p>
+            <p><b>EmailId:</b>{{ user.emailId}}</p>
+            <!-- <p align="center"><button (click)="request()" class="btn btn-primary">Request</button></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+</div>
+</body>

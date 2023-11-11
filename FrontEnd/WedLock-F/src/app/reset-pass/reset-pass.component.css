@@ -1,0 +1,22 @@
+body {
+    background-image: url('src/assets/Images/login8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0; /* Remove margin to center the content */
+    padding: 0; /* Remove padding to center the content */
+}
+
+.container {
+    height: 100%; /* Make the container occupy the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 400px;
+    background-color: #ebf5d6;
+    /* You can add additional styling here as needed */
+}
